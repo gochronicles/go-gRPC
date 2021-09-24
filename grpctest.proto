@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./grpctest";
+
+package grpctest;
+
+message Message{
+    string body = 1;
+}
+
+service grpctest{
+    rpc GrpcConnect(Message) returns (Message){}
+}
+
+
